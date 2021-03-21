@@ -4,9 +4,9 @@
 
 General
 
-- [ ] View
+- [x] View
 
-- [ ] Text
+- [X] Text
 
 - [ ] Button
 
