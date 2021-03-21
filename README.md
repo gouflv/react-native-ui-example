@@ -4,6 +4,10 @@
 
 General
 
+- [ ] View
+
+- [ ] Text
+
 - [ ] Button
 
 - [ ] Icon
@@ -12,7 +16,7 @@ Layout
 
 - [ ] Grid / Row / Col
 
-Navgation
+Navigation
 
 - [ ] Header
 
@@ -30,7 +34,7 @@ Form
 
 - [ ] Switch
 
-- [ ] Text / TextArea
+- [ ] TextInput / TextArea
 
 - [ ] Field
 
@@ -50,6 +54,8 @@ Data Display
 
 - [ ] List
 
+- [ ] Video
+
 Feedback
 
 - [ ] ActionSheet
@@ -59,4 +65,3 @@ Feedback
 - [ ] Dialog
 
 - [ ] Toast
-
