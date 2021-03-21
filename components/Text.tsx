@@ -29,5 +29,5 @@ const StyledText = styled(_Text)(
 )
 
 export const Text: FC<TextProps> = props => (
-  <StyledText {...props}>${props.children}</StyledText>
+  <StyledText {...props}>{props.children}</StyledText>
 )

@@ -27,10 +27,11 @@ export type BoxProps = ViewProps &
   BorderProps &
   PositionProps &
   ShadowProps & {
+    center?: boolean
     _text?: TextProps
   }
 
-const StyledBox = styled(View)(
+const StyledBox = styled(View)<BoxProps>(
   space,
   color,
   layout,
@@ -42,7 +43,11 @@ const StyledBox = styled(View)(
 
 export const Box: FC<BoxProps> = props => {
   return (
-    <StyledBox {...props}>
+    <StyledBox
+      {...props}
+      alignItems={props.center ? 'center' : 'stretch'}
+      justifyContent={props.center ? 'center' : 'flex-start'}
+    >
       {React.Children.map(props.children, child =>
         typeof child === 'string' ? (
           <Text {...props._text}>{child}</Text>

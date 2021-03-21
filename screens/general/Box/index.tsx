@@ -9,9 +9,8 @@ export const BoxExample = () => {
         marginBottom={20}
         height={200}
         backgroundColor={'#5fd634'}
-        alignItems={'center'}
-        justifyContent={'center'}
         _text={{ fontSize: 20 }}
+        center
       >
         Block Box
       </Box>
@@ -20,9 +19,8 @@ export const BoxExample = () => {
         width={1 / 2}
         height={200}
         backgroundColor={'#e02e2e'}
-        alignItems={'center'}
-        justifyContent={'center'}
         _text={{ color: '#fff', fontSize: 20 }}
+        center
       >
         Half Width Box
       </Box>
