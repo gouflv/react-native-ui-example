@@ -1,10 +1,9 @@
-import { Text } from 'react-native'
 import React from 'react'
 import { Box } from '../../../components/Box'
 
 export const BoxExample = () => {
   return (
-    <Box flex={1}>
+    <Box>
       <Box
         marginBottom={20}
         height={200}

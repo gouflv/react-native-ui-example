@@ -1,14 +1,13 @@
-import { SafeAreaView } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 import { BoxExample } from './general/Box'
-import { Box } from '../components/Box'
+import { ButtonExample } from './general/Button'
 
 export const Example = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Box flex={1}>
-        <BoxExample />
-      </Box>
+      <BoxExample />
+      <ButtonExample />
     </SafeAreaView>
   )
 }

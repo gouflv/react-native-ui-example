@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Text as _Text, TextProps as _TextProps } from 'react-native'
+import { Text as NativeText, TextProps as NativeTextProps } from 'react-native'
 import styled from 'styled-components/native'
 import {
   color,
@@ -13,13 +13,13 @@ import {
   TypographyProps
 } from 'styled-system'
 
-export type TextProps = _TextProps &
+export type TextProps = NativeTextProps &
   SpaceProps &
   ColorProps &
   TypographyProps &
   LayoutProps
 
-const StyledText = styled(_Text)(
+const StyledText = styled(NativeText)(
   color,
   space,
   color,
