@@ -16,6 +16,10 @@ Layout
 
 - [ ] Grid / Row / Col
 
+- [ ] AspectRatio
+
+- [ ] Space
+
 Navigation
 
 - [ ] Header
