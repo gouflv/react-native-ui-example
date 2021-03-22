@@ -13,17 +13,19 @@ import {
   shadow,
   ShadowProps,
   space,
-  SpaceProps
+  SpaceProps,
+  variant
 } from 'styled-system'
 import { Box } from './Box'
 import { Text, TextProps } from './Text'
-
+import { buttonStyle } from 'styled-system'
 export type ButtonProps = SpaceProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
   BorderProps &
-  ShadowProps & {
+  ShadowProps &
+  TouchableOpacityProps & {
     variant?: 'solid' | 'outline' | 'link' | 'ghost' | 'unStyled'
     loading?: boolean
     loadingText?: string
@@ -34,25 +36,32 @@ export type ButtonProps = SpaceProps &
     _text?: TextProps
   }
 
-const StyledButton = styled(TouchableOpacity)<
-  ButtonProps & TouchableOpacityProps
->(space, color, layout, flexbox, border, shadow)
+const StyledButton = styled(TouchableOpacity)<ButtonProps>(
+  ({ theme }) => theme.components.button.base,
+  variant({ scale: 'components.button.variant' }),
+  variant({ prop: 'size', scale: 'components.button.size' }),
+  space,
+  color,
+  layout,
+  flexbox,
+  border,
+  shadow
+)
 
 export const Button: FC<ButtonProps> = props => {
   const {
-    variant,
     loading,
     loadingText,
     spinner,
     disabled,
     icon,
-    size,
     _text,
     children,
-    ...styledProps
+    ...styleProps
   } = props
+
   return (
-    <StyledButton {...styledProps}>
+    <StyledButton {...styleProps}>
       <Box>
         {loading ? (
           <Box flexDirection={'row'}>
@@ -69,3 +78,6 @@ export const Button: FC<ButtonProps> = props => {
     </StyledButton>
   )
 }
+
+Button.defaultProps = { variant: 'solid', size: 'md' }
+Button.displayName = 'Button'
